@@ -27,10 +27,10 @@ export default {
         }
     },
     mounted() {
-        addResizeListener(this.$el, this.resizeListener);
+        // addResizeListener(this.$el, this.resizeListener);
     },
     destroyed() {
-        removeResizeListener(this.$el, this.resizeListener);
+        // removeResizeListener(this.$el, this.resizeListener);
     },
     render() {
 
