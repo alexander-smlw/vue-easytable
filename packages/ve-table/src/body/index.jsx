@@ -735,46 +735,44 @@ export default {
         }
     },
     mounted() {
-        // Comment all listeners
+        // receive checkbox row selected change from VE_TABLE_BODY_CHECKBOX_CONTENT
+        this.$on(EMIT_EVENTS.CHECKBOX_SELECTED_ROW_CHANGE, params => {
+            this.checkboxSelectedRowChange(params);
+        });
 
         // receive checkbox row selected change from VE_TABLE_BODY_CHECKBOX_CONTENT
-        // this.$on(EMIT_EVENTS.CHECKBOX_SELECTED_ROW_CHANGE, params => {
-        //     this.checkboxSelectedRowChange(params);
-        // });
-
-        // receive checkbox row selected change from VE_TABLE_BODY_CHECKBOX_CONTENT
-        // this.$on(EMIT_EVENTS.CHECKBOX_SELECTED_ALL_CHANGE, params => {
-        //     this.checkboxSelectedAllChange(params);
-        // });
+        this.$on(EMIT_EVENTS.CHECKBOX_SELECTED_ALL_CHANGE, params => {
+            this.checkboxSelectedAllChange(params);
+        });
 
         // receive radio row selected change from VE_TABLE_BODY_RADIO_CONTENT
-        // this.$on(EMIT_EVENTS.RADIO_SELECTED_ROW_CHANGE, params => {
-        //     this.radioSelectedRowChange(params);
-        // });
+        this.$on(EMIT_EVENTS.RADIO_SELECTED_ROW_CHANGE, params => {
+            this.radioSelectedRowChange(params);
+        });
 
         // recieve tr click
-        // this.$on(EMIT_EVENTS.BODY_TR_CLICK, params => {
-        //     this.rowClick(params);
-        // });
+        this.$on(EMIT_EVENTS.BODY_TR_CLICK, params => {
+            this.rowClick(params);
+        });
 
         // recieve yd click
-        // this.$on(EMIT_EVENTS.BODY_TD_CLICK, params => {
-        //     this.tdClick(params);
-        // });
+        this.$on(EMIT_EVENTS.BODY_TD_CLICK, params => {
+            this.tdClick(params);
+        });
 
-        // if (this.checkboxOption) {
-        // 这里 nextTick 解决由于子组件先初始化，导致父组件无法接收消息的问题
-        //     this.$nextTick(() => {
-        //         this.sendToCheckboxAll();
-        //     });
-        // }
+        if (this.checkboxOption) {
+            // 这里 nextTick 解决由于子组件先初始化，导致父组件无法接收消息的问题
+            this.$nextTick(() => {
+                this.sendToCheckboxAll();
+            });
+        }
 
         // add key down event listener
-        // document.addEventListener("keydown", this.dealKeydownEvent);
+        document.addEventListener("keydown", this.dealKeydownEvent);
     },
     destroyed() {
         // remove key down event listener
-        // document.removeEventListener("keydown", this.dealKeydownEvent);
+        document.removeEventListener("keydown", this.dealKeydownEvent);
     },
     render() {
         const {

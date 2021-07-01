@@ -197,21 +197,21 @@ export default {
         } = customEvents;
 
         const events = {
-            // click: e => {
-            //     this.rowClick(e, click);
-            // },
-            // dblclick: e => {
-            //     this.rowDblclick(e, dblclick);
-            // },
-            // contextmenu: e => {
-            //     this.rowContextmenu(e, contextmenu);
-            // },
-            // mouseenter: e => {
-            //     this.rowMouseenter(e, mouseenter);
-            // },
-            // mouseleave: e => {
-            //     this.rowMouseleave(e, mouseleave);
-            // }
+            click: e => {
+                this.rowClick(e, click);
+            },
+            dblclick: e => {
+                this.rowDblclick(e, dblclick);
+            },
+            contextmenu: e => {
+                this.rowContextmenu(e, contextmenu);
+            },
+            mouseenter: e => {
+                this.rowMouseenter(e, mouseenter);
+            },
+            mouseleave: e => {
+                this.rowMouseleave(e, mouseleave);
+            }
         };
 
         const props = {
@@ -222,7 +222,7 @@ export default {
             attrs: {
                 [COMPS_CUSTOM_ATTRS.BODY_ROW_KEY]: this.currentRowKey
             },
-            nativeOn: events,
+            // nativeOn: events,
             on: {
                 "on-dom-resize-change": this.trHeightChange
             }

@@ -516,21 +516,21 @@ export default {
         } = customEvents;
 
         const events = {
-            // click: e => {
-            //     this.cellClick(e, click);
-            // },
-            // dblclick: e => {
-            //     this.cellDblclick(e, dblclick);
-            // },
-            // contextmenu: e => {
-            //     this.cellContextmenu(e, contextmenu);
-            // },
-            // mouseenter: e => {
-            //     this.cellMouseenter(e, mouseenter);
-            // },
-            // mouseleave: e => {
-            //     this.cellMouseleave(e, mouseleave);
-            // }
+            click: e => {
+                this.cellClick(e, click);
+            },
+            dblclick: e => {
+                this.cellDblclick(e, dblclick);
+            },
+            contextmenu: e => {
+                this.cellContextmenu(e, contextmenu);
+            },
+            mouseenter: e => {
+                this.cellMouseenter(e, mouseenter);
+            },
+            mouseleave: e => {
+                this.cellMouseleave(e, mouseleave);
+            }
         };
 
         // td props
@@ -541,7 +541,7 @@ export default {
                 rowspan,
                 colspan
             },
-            on: events
+            // on: events
         };
 
         return (
