@@ -77,12 +77,12 @@ export default {
 
             __autoAdjustment__events__.push(handler);
 
-            document.addEventListener("scroll", handler);
-            window.addEventListener("resize", handler);
+            // document.addEventListener("scroll", handler);
+            // window.addEventListener("resize", handler);
         }
     },
     beforeDestroy() {
-        document.removeEventListener("scroll", __autoAdjustment__events__);
-        window.removeEventListener("resize", __autoAdjustment__events__);
+        // document.removeEventListener("scroll", __autoAdjustment__events__);
+        // window.removeEventListener("resize", __autoAdjustment__events__);
     }
 };

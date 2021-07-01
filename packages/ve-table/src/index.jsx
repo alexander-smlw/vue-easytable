@@ -969,39 +969,39 @@ export default {
         },
     },
     mounted() {
-        // receive row selected change
-        this.$on(EMIT_EVENTS.CHECKBOX_SELECTED_ALL_CHANGE, params => {
-            this.selectedAllChange(params);
-        });
+        // // receive row selected change
+        // this.$on(EMIT_EVENTS.CHECKBOX_SELECTED_ALL_CHANGE, params => {
+        //     this.selectedAllChange(params);
+        // });
 
-        // receive selected all info
-        this.$on(EMIT_EVENTS.CHECKBOX_SELECTED_ALL_INFO, params => {
-            this.setSelectedAllInfo(params);
-        });
+        // // receive selected all info
+        // this.$on(EMIT_EVENTS.CHECKBOX_SELECTED_ALL_INFO, params => {
+        //     this.setSelectedAllInfo(params);
+        // });
 
-        // receive multiple header row height change
-        this.$on(
-            EMIT_EVENTS.HEADER_TR_HEIGHT_CHANGE,
-            ({ rowIndex, height }) => {
-                this.headerTrHeightChange({ rowIndex, height });
-            }
-        );
+        // // receive multiple header row height change
+        // this.$on(
+        //     EMIT_EVENTS.HEADER_TR_HEIGHT_CHANGE,
+        //     ({ rowIndex, height }) => {
+        //         this.headerTrHeightChange({ rowIndex, height });
+        //     }
+        // );
 
-        // receive virtual scroll row height change
-        this.$on(EMIT_EVENTS.BODY_TR_HEIGHT_CHANGE, ({ rowKey, height }) => {
-            this.bodyTrHeightChange({ rowKey, height });
-        });
+        // // receive virtual scroll row height change
+        // this.$on(EMIT_EVENTS.BODY_TR_HEIGHT_CHANGE, ({ rowKey, height }) => {
+        //     this.bodyTrHeightChange({ rowKey, height });
+        // });
 
-        // receive footer row height change
-        this.$on(
-            EMIT_EVENTS.Footer_TR_HEIGHT_CHANGE,
-            ({ rowIndex, height }) => {
-                this.footTrHeightChange({ rowIndex, height });
-            }
-        );
+        // // receive footer row height change
+        // this.$on(
+        //     EMIT_EVENTS.Footer_TR_HEIGHT_CHANGE,
+        //     ({ rowIndex, height }) => {
+        //         this.footTrHeightChange({ rowIndex, height });
+        //     }
+        // );
 
-        // add key down event listener
-        document.addEventListener("keydown", this.dealKeydownEvent);
+        // // add key down event listener
+        // document.addEventListener("keydown", this.dealKeydownEvent);
 
         // init virtual scroll
         this.initVirtualScroll();
@@ -1011,7 +1011,7 @@ export default {
     },
     destroyed() {
         // remove key down event listener
-        document.removeEventListener("keydown", this.dealKeydownEvent);
+        // document.removeEventListener("keydown", this.dealKeydownEvent);
     },
     render() {
         const {
