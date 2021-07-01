@@ -260,21 +260,21 @@ export default {
         } = customEvents;
 
         const events = {
-            click: e => {
-                this.rowClick(e, click);
-            },
-            dblclick: e => {
-                this.rowDblclick(e, dblclick);
-            },
-            contextmenu: e => {
-                this.rowContextmenu(e, contextmenu);
-            },
-            mouseenter: e => {
-                this.rowMouseenter(e, mouseenter);
-            },
-            mouseleave: e => {
-                this.rowMouseleave(e, mouseleave);
-            }
+            // click: e => {
+            //     this.rowClick(e, click);
+            // },
+            // dblclick: e => {
+            //     this.rowDblclick(e, dblclick);
+            // },
+            // contextmenu: e => {
+            //     this.rowContextmenu(e, contextmenu);
+            // },
+            // mouseenter: e => {
+            //     this.rowMouseenter(e, mouseenter);
+            // },
+            // mouseleave: e => {
+            //     this.rowMouseleave(e, mouseleave);
+            // }
         };
 
         if (this.isVirtualScroll) {
