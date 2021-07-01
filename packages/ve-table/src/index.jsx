@@ -967,15 +967,6 @@ export default {
                 this.setScrolling();
             }
         },
-
-        // table blur
-        tableBlur() {
-            // reset cell selection key data
-            this.cellSelectionKeyData = {
-                rowKey: "",
-                columnKey: ""
-            };
-        }
     },
     mounted() {
         // receive row selected change
@@ -1115,12 +1106,6 @@ export default {
             on: {
                 scroll: this.tableContainerScrollHandler
             },
-            directives: [
-                {
-                    name: "click-outside",
-                    value: this.tableBlur
-                }
-            ]
         };
 
         return (
