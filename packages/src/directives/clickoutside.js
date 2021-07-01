@@ -22,11 +22,11 @@ export default {
 
         el.__clickOutSide__ = handler
 
-        // document.addEventListener('click', handler, true)
+        document.addEventListener('click', handler, true)
     },
 
     unbind: function (el) {
-        // document.removeEventListener('click', el.__clickOutSide__, true)
+        document.removeEventListener('click', el.__clickOutSide__, true)
         el.__clickOutSide__ = null
 
     }
