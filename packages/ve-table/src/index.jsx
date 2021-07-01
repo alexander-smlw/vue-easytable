@@ -13,15 +13,11 @@ import Body from "./body";
 import Footer from "./footer";
 import { KEY_CODES } from "../../src/utils/constant";
 import { isEmptyValue } from "../../src/utils/index";
-import clickoutside from "../../src/directives/clickoutside";
 import { mutations } from "./util/store";
 import VueDomResizeObserver from "../../src/comps/resize-observer";
 
 export default {
     name: COMPS_NAME.VE_TABLE,
-    directives: {
-        "click-outside": clickoutside
-    },
     mixins: [emitter],
     props: {
         tableData: {
