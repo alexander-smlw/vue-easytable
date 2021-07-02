@@ -1075,7 +1075,7 @@ export default {
                 editOption: this.editOption
             },
             on: {
-                [EMIT_EVENTS.BODY_TD_WIDTH_CHANGE]: tdWidthChange,
+                // [EMIT_EVENTS.BODY_TD_WIDTH_CHANGE]: tdWidthChange,
                 [EMIT_EVENTS.CELL_SELECTION_KEY_CHANGE]: this
                     .cellSelectionKeyChange
             }
